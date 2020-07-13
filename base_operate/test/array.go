@@ -31,6 +31,16 @@ func Test_array() {
 	// 数组的长度是数组的组成部分，[10]int和[20]int表示不同的类型
 	// 可以根据数组创建切片
 
+	// 数组的遍历 range遍历
+	for k, v := range arr_7 {
+		fmt.Println("arr_7:[k,v]", k, v)
+	}
+
+	//通过索引遍历数组及访问数组的值
+	for i := 0; i < len(arr_6); i++ {
+		fmt.Println("arr_6[i]", i, arr_6[i])
+	}
+
 	fmt.Println("-------------testing array end---------------")
 	fmt.Println()
 }
