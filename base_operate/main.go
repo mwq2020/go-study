@@ -12,6 +12,7 @@ func main() {
 	fmt.Println("")
 
 	test.Test_array()
+	test.Test_slice()
 
 	fmt.Println("")
 	fmt.Println("test script ending")
