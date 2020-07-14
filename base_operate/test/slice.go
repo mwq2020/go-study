@@ -70,6 +70,17 @@ func Test_slice() {
 
 	/*************切片和数组的区别************/
 
+	/*************切片的追加和copy************/
+	sli_e := make([]int, 5)
+	sli_e[2] = 2
+	fmt.Println("sli_e:", sli_e)
+	sli_e = append(sli_e, 6, 7, 8) //可以追加多个
+	fmt.Println("sli_e:", sli_e)
+	sli_f := make([]int, 3)
+	sli_e = append(sli_e, sli_f...) //追加一个slice到另外一个slice上，注意格式需要加上...
+	fmt.Println("sli_e:", sli_e)
+	/*************切片的追加和copy************/
+
 	//在unicode中，一个中文占两个字节，utf-8中一个中文占三个字节，golang默认的编码是utf-8编码，因此默认一个中文占三个字节，但是golang中的字符串底层实际上是一个byte数组
 	str := "hello,世界！"
 	slice_1 := []byte(str) //将字符串转化为字符切片
